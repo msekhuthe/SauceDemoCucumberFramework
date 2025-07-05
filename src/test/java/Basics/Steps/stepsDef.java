@@ -1,4 +1,4 @@
-package Steps;
+package Basics.Steps;
 
 import io.cucumber.java.en.*;
 import org.openqa.selenium.By;
