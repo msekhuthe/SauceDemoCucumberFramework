@@ -14,10 +14,10 @@ public class LandingPage {
     WebDriver driver;
 
     @FindBy(xpath = "//span[contains(.,'First Name')]")
-    WebElement firstNameLabel;
+    WebElement firstNameLabel_xpath;
 
     @FindBy(xpath = "//button[contains(.,'Add User')]")
-    WebElement addUserButton;
+    WebElement addUserButton_xpath;
 
     public LandingPage(WebDriver driver){
         this.driver = driver;
@@ -25,13 +25,13 @@ public class LandingPage {
     }
     public void verifyFirstNameLabel(String actualText) {
         new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(visibilityOf(firstNameLabel));
+                .until(visibilityOf(firstNameLabel_xpath));
         //firstNameLabel.isDisplayed();
-        actualText = firstNameLabel.getText();
+        actualText = firstNameLabel_xpath.getText();
         Assert.assertEquals(actualText, "First Name");
     }
     public void clickAddUserButton(){
-        addUserButton.click();
+        addUserButton_xpath.click();
     }
 
 }
