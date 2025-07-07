@@ -31,8 +31,9 @@ public class BrowserFactory {
 
         switch (browserChoice.toLowerCase()) {
             case "edge":
-               // EdgeOptions edgeOptions = new EdgeOptions();
-                driver = new EdgeDriver();
+                EdgeOptions edgeOptions = new EdgeOptions();
+                edgeOptions.addArguments("--headless");
+                driver = new EdgeDriver(edgeOptions);
                 break;
             case "firefox":
                 driver = new FirefoxDriver();
