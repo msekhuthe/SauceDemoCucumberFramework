@@ -24,28 +24,25 @@ public class AddUserPage {
     @FindBy(name = "Password")
     WebElement passwordInput_xpath;
 
-    public void verifyAddUserHeader(String actualText){
+    public void verifyAddUserHeader(String actualText) {
         new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(visibilityOf(addUserHeader_xpath));
         actualText = addUserHeader_xpath.getText();
         Assert.assertEquals(actualText, "Add User");
 
     }
-    public void enterFirstName(String firstName){
+
+    public void enterFirstName(String firstName) {
         firstNameInput_xpath.sendKeys(firstName);
     }
 
-    public void enterLastName(String lastName){
+    public void enterLastName(String lastName) {
         lastNameInput_xpath.sendKeys(lastName);
     }
-    public void enterUsername(String userName){
+
+    public void enterUsername(String userName) {
         userNameInput_xpath.sendKeys(userName);
     }
-
-
-
-
-
 
 
 }

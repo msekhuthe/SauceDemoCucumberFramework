@@ -19,10 +19,11 @@ public class LandingPage {
     @FindBy(xpath = "//button[contains(.,'Add User')]")
     WebElement addUserButton_xpath;
 
-    public LandingPage(WebDriver driver){
+    public LandingPage(WebDriver driver) {
         this.driver = driver;
 
     }
+
     public void verifyFirstNameLabel(String actualText) {
         new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(visibilityOf(firstNameLabel_xpath));
@@ -30,7 +31,8 @@ public class LandingPage {
         actualText = firstNameLabel_xpath.getText();
         Assert.assertEquals(actualText, "First Name");
     }
-    public void clickAddUserButton(){
+
+    public void clickAddUserButton() {
         addUserButton_xpath.click();
     }
 
