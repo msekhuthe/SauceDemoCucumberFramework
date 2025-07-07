@@ -1,5 +1,6 @@
 package Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,6 +24,8 @@ public class AddUserPage {
     WebElement userNameInput_xpath;
     @FindBy(name = "Password")
     WebElement passwordInput_xpath;
+    @FindBy(name = "RoleId")
+    WebElement roleIdInput_xpath;
 
     public void verifyAddUserHeader(String actualText) {
         new WebDriverWait(driver, Duration.ofSeconds(10))
@@ -42,6 +45,12 @@ public class AddUserPage {
 
     public void enterUsername(String userName) {
         userNameInput_xpath.sendKeys(userName);
+    }
+    public void selectRole(String userRole) {
+        roleIdInput_xpath.click();
+        WebElement roleOption = driver.findElement(By.xpath("//option[contains(text(),'" + userRole + "')]"));
+        roleOption.click();
+
     }
 
 

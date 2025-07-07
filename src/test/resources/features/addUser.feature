@@ -1,3 +1,4 @@
+@addUser
 Feature: User Table
 
   Scenario Outline: As a user, I want to add a new user to the table

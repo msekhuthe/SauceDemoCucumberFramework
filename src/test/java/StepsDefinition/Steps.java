@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 
 import java.util.Random;
 
-
 public class Steps extends Base {
     @Given("I am on the user table page")
     public void i_am_on_the_user_table_page() {
@@ -61,8 +60,7 @@ public class Steps extends Base {
 //    }
 //    @Then("I will select the role")
 //    public void i_will_select_the_role() {
-//        // Write code here that turns the phrase above into concrete actions
-//        throw new io.cucumber.java.PendingException();
+//
 //    }
 //    @Then("I will enter the email <email>")
 //    public void i_will_enter_the_email_email() {
